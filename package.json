@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://mysolon.github.io",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d src"
   },
   "repository": {
     "type": "git",
@@ -16,7 +18,6 @@
   "bugs": {
     "url": "https://github.com/mysolon/mysolon.github.io/issues"
   },
-  "homepage": "https://github.com/mysolon/mysolon.github.io#readme",
   "devDependencies": {
     "gh-pages": "^3.2.3"
   }
