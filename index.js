@@ -1,8 +1,11 @@
 const fs = require('fs')
+console.log(__dirname)
 const heading = 'Hello from my custom heading'
-var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-let rawdata = fs.readFileSync('data.json');
+var ghpages = require('gh-pages');
+
+let today = new Date();
+today.setHours(today.getHours() + 2);
+let rawdata = fs.readFileSync(__dirname+'/data.json');
 let student = JSON.parse(rawdata);
 
 const content = `<!DOCTYPE html>
@@ -52,9 +55,15 @@ const content = `<!DOCTYPE html>
   `
 
 try {
-  fs.writeFileSync('./src/index.html', content)
+  fs.writeFileSync(__dirname+"/src/index.html", content)
   //file written successfully
 } catch (err) {
   console.error(err)
 }
+
+
+
+
+ghpages.publish(__dirname+"/src", function(err) {console.log('ho')});
+
 
