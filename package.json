@@ -6,6 +6,7 @@
   "homepage": "https://mysolon.github.io",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "node index.js",
     "deploy": "gh-pages -d src"
   },
   "repository": {

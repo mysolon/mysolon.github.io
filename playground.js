@@ -1,4 +1,10 @@
+'use strict';
 
+const fs = require('fs');
+
+let rawdata = fs.readFileSync('data.json');
+let student = JSON.parse(rawdata);
+console.log(student);
 var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-console.log(time);
+
+today.toLocaleString('el-GR')
