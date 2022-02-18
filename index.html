@@ -1,9 +1,27 @@
 <!DOCTYPE html>
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>MySolon</title>
+    <script src="https://swetrix.org/swetrix.js" defer></script>
+  </head>
   <body>
     <h1>Hello World</h1>
     <p>I'm hosted with GitHub Pages.</p>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialising the script with the Project ID
+        // you can find in the dashboard
+        swetrix.init("9j4Gy9gAGcgQ");
+
+        // Tracking page views
+        swetrix.trackViews();
+      });
+    </script>
   </body>
 </html>
