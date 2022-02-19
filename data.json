@@ -1,1 +1,80 @@
-{"users":"249","cases":"1276","updated":"1272","decisions":"154"}
+{
+  "users": "249",
+  "cases": "1276",
+  "updated": "1274",
+  "decisions": "154",
+  "res": {
+    "noDec": [
+      {
+        "imerominia": "2019-01-16T00:00:00.000Z",
+        "apofasi": " ",
+        "gak_id": 1013,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ"
+      },
+      {
+        "imerominia": "2019-01-25T00:00:00.000Z",
+        "apofasi": " ",
+        "gak_id": 1516,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ"
+      },
+      {
+        "imerominia": "2019-02-13T00:00:00.000Z",
+        "apofasi": " ",
+        "gak_id": 720,
+        "court": "ΕΙΡΗΝΟΔΙΚΕΙΟ ΠΕΙΡΑΙΑ",
+        "apotelesma": " "
+      }
+    ],
+    "biggestDif": [
+      {
+        "imerominia": "2021-09-30T00:00:00.000Z",
+        "eidos": "dikasimos",
+        "gak_id": 1400,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ",
+        "katathesi": "2013-11-27T00:00:00.000Z",
+        "difference": 247449600000
+      },
+      {
+        "imerominia": "2021-12-07T00:00:00.000Z",
+        "eidos": "dikasimos",
+        "gak_id": 1152,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ",
+        "katathesi": "2014-03-19T00:00:00.000Z",
+        "difference": 243648000000
+      },
+      {
+        "imerominia": "2021-10-12T00:00:00.000Z",
+        "eidos": "dikasimos",
+        "gak_id": 546,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ",
+        "katathesi": "2014-04-14T00:00:00.000Z",
+        "difference": 236563200000
+      }
+    ],
+    "sinceKatathesi": [
+      {
+        "gak_id": 996,
+        "court": "ΕΙΡΗΝΟΔΙΚΕΙΟ ΠΕΙΡΑΙΑ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ",
+        "katathesi": "2012-07-10T00:00:00.000Z"
+      },
+      {
+        "gak_id": 1047,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ",
+        "katathesi": "2012-11-20T00:00:00.000Z"
+      },
+      {
+        "gak_id": 610,
+        "court": "ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ",
+        "apotelesma": "ΣΥΖΗΤΗΘΗΚΕ",
+        "katathesi": "2012-12-13T00:00:00.000Z"
+      }
+    ]
+  }
+}
