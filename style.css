@@ -5,6 +5,7 @@
 }
 header {
   background-color: #469a7f;
+  margin-top: -15px;
   height: 70px;
   width: 100%;
 }
@@ -12,7 +13,7 @@ header {
 .container {
   background-color: #ffffff;
   padding: 10px;
-  margin: 5px;
+  margin: -30px auto;
   display: flex;
   flex-direction: column;
 }
@@ -42,21 +43,26 @@ header > h1 > span {
   border-width: 2px;
   display: inline-block;
   margin-top: -49px;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
+.links {
+  /* background-color: #d4d4d4; */
+  display: inline-block;
+}
 body {
   font-family: "Roboto", sans-serif;
   background: white;
 }
 
 main {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
-  margin: 1rem;
+  margin: 2rem 1rem;
   gap: 1.5rem;
 }
 
@@ -97,7 +103,9 @@ main {
 .card.elegant {
   border: 10px double black;
   border-radius: 0;
-  font-family: "Roboto Serif", serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .card.playful {
@@ -115,6 +123,8 @@ main {
   background: linear-gradient(to bottom right, cyan 50%, fuchsia 50%);
   border-radius: 30px 0 30px 0;
   font-family: "Roboto Mono", monospace;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .card.brutal .card__title {
@@ -130,4 +140,105 @@ main {
 .card p {
   margin: 1rem;
   padding: 10px;
+}
+
+article {
+  text-align: left;
+  /* width: 700px; */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.6px;
+  display: flex;
+  flex-direction: column;
+}
+
+article > h3 {
+  padding-top: 1.2em;
+}
+article > p {
+  padding-top: 8px;
+  line-height: 1.6;
+  text-align: justify;
+  font-size: 1.1em;
+}
+
+article.intro > p {
+  padding-top: 8px;
+  line-height: 1.7;
+  /* font-style: italic; */
+  font-size: 1.2em;
+}
+
+.head-title {
+  display: inline-block;
+  /* position: relative; */
+  margin-top: 30px;
+  margin-left: 180px;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 38px;
+}
+
+.head-navigation {
+  display: block;
+  width: 100%;
+  /* color: ; */
+  background-color: #3b7562;
+  margin-left: 0px;
+  padding-left: 180px;
+  min-height: 2em;
+  padding-top: 1px;
+}
+/* unvisited link */
+a:link.links {
+  color: #e3e3e3;
+}
+
+/* visited link */
+a:visited.links {
+  color: #e3e3e3;
+}
+
+/* mouse over link */
+a:hover.links {
+  color: #e3e3e3;
+  background-color: #14513e;
+  cursor: pointer;
+}
+
+/* selected link */
+a:active.links {
+  color: #e3e3e3;
+}
+
+.gif {
+  padding-top: 10px;
+  margin: 0 auto;
+  display: inline;
+  /* width: 235px; */
+}
+
+@media only screen and (min-width: 1024px) {
+  :root {
+    background-color: #469a7f;
+  }
+  /* For desktop: */
+  body {
+    width: 70%;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  header {
+    background-color: #469a7f;
+    margin-top: -15px;
+    height: 70px;
+    /* position: absolute; */
+    /* z-index: -123; */
+    /* margin: 0px 0px; */
+  }
+}
+
+.hall {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }

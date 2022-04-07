@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#469a7f" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap&text=MySoln"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>MySolon</title>
+    <script src="https://swetrix.org/swetrix.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <p class="head-title"><span>MySolon</span></p>
+      <p class="head-navigation">
+        <a class="links" href="#odigies">Οδηγίες</a>
+        <a class="links" href="#stats">Στατιστικά</a>
+        <!-- <span></span> <span>Στατιστικά</span> -->
+      </p>
+    </header>
+    <img class="dot" src="/images/logo.jpeg" alt="logo" />
+
+    <div class="container">
+      <main>
+        <article class="intro">
+          <h3>To MySolonBot σας βοηθάει</h3>
+
+          <p class="">
+            Προστέθηκε δοκιμαστικά και η δυνατότητα για έλεγχο τυχόν άσκησης
+            ενδίκου μέσου. Γράφετε <strong>/gak efesi</strong> και μετά
+            επιλέγετε την υπόθεση για την οποία θέλετε να γίνεται έλεγχος. Αν
+            ασκηθεί κάποιο ένδικο μέσο θα σας έρθει ειδοποιήση (ειδοποίηση
+            έρχεται μόνο για το πρώτο ένδικο μέσο, σε περίπτωση πχ που ασκηθούν
+            περισσότερες εφέσεις).
+          </p>
+        </article>
+        <article>
+          <h3>Εγκατάσταση της εφαρμογής telegram</h3>
+
+          <p>
+            Προστέθηκε δοκιμαστικά και η δυνατότητα για έλεγχο τυχόν άσκησης
+            ενδίκου μέσου. Γράφετε <strong>/gak efesi</strong> και μετά
+            επιλέγετε την υπόθεση για την οποία θέλετε να γίνεται έλεγχος. Αν
+            ασκηθεί κάποιο ένδικο μέσο θα σας έρθει ειδοποιήση (ειδοποίηση
+            έρχεται μόνο για το πρώτο ένδικο μέσο, σε περίπτωση πχ που ασκηθούν
+            περισσότερες εφέσεις).
+          </p>
+          <img
+            class="gif"
+            src="./images/sample.gif"
+            alt="Παράδειγμα εισαγωγής ΓΑΚ"
+          />
+        </article>
+
+        <article>
+          <h3 id="odigies">Mozilla Firefox</h3>
+          <p>
+            Mozilla Firefox is an open-source web browser developed by Mozilla.
+            Firefox has been the second most popular web browser since January,
+            2018.
+          </p>
+        </article>
+
+        <article>
+          <h3>Microsoft Edge</h3>
+          <p>
+            Microsoft Edge is a web browser developed by Microsoft, released in
+            2015. Microsoft Edge replaced Internet Explorer.
+          </p>
+        </article>
+        <div>
+          <canvas id="myChart"></canvas>
+        </div>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialising the script with the Project ID
+        // you can find in the dashboard
+        swetrix.init("9j4Gy9gAGcgQ");
+
+        // Tracking page views
+        swetrix.trackViews();
+      });
+    </script>
+    <script>
+      const labels = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "June",
+        "July",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+      ];
+
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "My First Dataset",
+            data: [1, 3, 6, 10, 11, 12, 13, 14, 15, 16, 15, 14, 13],
+            backgroundColor: ["pink"],
+            borderColor: ["rgb(255, 99, 132)"],
+            borderWidth: 1,
+            fill: true,
+            tension: 0.5,
+          },
+        ],
+      };
+
+      const config = {
+        type: "line",
+        data: data,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      const myChart = new Chart(document.getElementById("myChart"), config);
+    </script>
+  </body>
+</html>
