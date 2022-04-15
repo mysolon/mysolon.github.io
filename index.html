@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="theme-color" content="#469a7f" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="lo_Fb0YRjhiCK7pBKBXPkJ3J8a17hDqqF9SNDFbtRww" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -41,8 +40,18 @@
     <header>
       <p class="head-title"><span>MySolon</span></p>
       <p class="head-navigation">
-        <a class="links" href="#odigies">Οδηγίες</a>
-        <a class="links" href="#stats">Στατιστικά</a>
+        <a
+          class="links"
+          href="#odigies"
+          onclick="(()=>{document.dispatchEvent(evOdigies);})()"
+          >Οδηγίες</a
+        >
+        <a
+          class="links"
+          href="#stats"
+          onclick="(()=>{document.dispatchEvent(evStats);})()"
+          >Στατιστικά</a
+        >
         <!-- <span></span> <span>Στατιστικά</span> -->
       </p>
     </header>
@@ -52,20 +61,28 @@
       <main>
         <article class="intro">
           <h2>
-            To <a href="https://t.me/MySolonBot">MySolonBot</a> σας βοηθάει στην
-            παρακολούθηση των υποθέσεών σας στο solon.gov.gr
+            To
+            <a
+              href="https://t.me/MySolonBot"
+              onclick="(()=>{document.dispatchEvent(evClickBotLink);})()"
+              >MySolonBot</a
+            >
+            σας βοηθάει στην παρακολούθηση των υποθέσεών σας στο solon.gov.gr
           </h2>
           <h3 id="odigies">Οδηγίες</h3>
           <p class="">
             Εγκαθιστάτε την εφαρμογή μηνυμάτων Telegram στο κινητό σας ή στον
             υπολογιστή σας <a href="https://telegram.org">telegram.org</a> και
             έπειτα πατάτε τον ακόλουθο σύνδεσμο
-            <a href="https://t.me/MySolonBot">MySolonBot</a>. Στη συνέχεια
-            πληκτρολογείτε ΓΑΚ και έτος με μορφή /gak αριθμός έτος πχ /gak 123
-            2019 (αν γράψετε κάτι μετά το έτος περνάει σαν σημείωση - μέχρι 50
-            χαρακτήρες) και από το μενού που θα σας εμφανίσει επιλέγετε
-            δικαστήριο και έδρα. Όταν υπάρξει μεταβολή στην κατάσταση της
-            υπόθεσης θα σας έρθει ειδοποίηση.
+            <a
+              href="https://t.me/MySolonBot"
+              onclick="(()=>{document.dispatchEvent(evClickBotLink);})()"
+              >MySolonBot</a
+            >. Στη συνέχεια πληκτρολογείτε ΓΑΚ και έτος με μορφή /gak αριθμός
+            έτος πχ /gak 123 2019 (αν γράψετε κάτι μετά το έτος περνάει σαν
+            σημείωση - μέχρι 50 χαρακτήρες) και από το μενού που θα σας
+            εμφανίσει επιλέγετε δικαστήριο και έδρα. Όταν υπάρξει μεταβολή στην
+            κατάσταση της υπόθεσης θα σας έρθει ειδοποίηση.
           </p>
           <img
             class="gif"
@@ -176,8 +193,6 @@
             εισαγωγή στο ημερολόγιό του κινητού ή του υπολογιστή σας.
           </p>
         </article>
-        </br>
-        
 
         <section id="stats" class="card elegant">
           <h1 class="card__title">MySolonBot</h1>
@@ -209,12 +224,15 @@
             - 10/2/2022
             ΠΡΩΤΟΔΙΚΕΙΟ ΑΘΗΝΩΝ<br />
             <br />🕰<em> Τελευταίος έλεγχος:</em>
-            16/4/2022, 12:00:01 π.μ.
+            16/4/2022, 12:10:05 π.μ.
           </p>
         </section>
       </main>
     </div>
     <script>
+      const evClickBotLink = new Event("CLICK_BOT_LINK");
+      const evOdigies = new Event("ODIGIES");
+      const evStats = new Event("STATS");
       document.addEventListener("DOMContentLoaded", () => {
         // Initialising the script with the Project ID
         // you can find in the dashboard
@@ -222,6 +240,39 @@
 
         // Tracking page views
         swetrix.trackViews();
+        swetrix.track({
+          ev: "CLICK_BOT_LINK",
+        });
+        document.addEventListener(
+          "CLICK_BOT_LINK",
+          (e) => {
+            console.log(e);
+            console.log("hey");
+          },
+          false
+        );
+        swetrix.track({
+          ev: "ODIGIES",
+        });
+        document.addEventListener(
+          "ODIGIES",
+          (e) => {
+            console.log(e);
+            console.log("hey");
+          },
+          false
+        );
+        swetrix.track({
+          ev: "STATS",
+        });
+        document.addEventListener(
+          "STATS",
+          (e) => {
+            console.log(e);
+            console.log("hey");
+          },
+          false
+        );
       });
     </script>
   </body>
